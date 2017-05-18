@@ -1,4 +1,4 @@
-package design.create.factory.statical;
+package design.create.factory.statics;
 
 import design.create.sender.MailSender;
 import design.create.sender.Sender;
