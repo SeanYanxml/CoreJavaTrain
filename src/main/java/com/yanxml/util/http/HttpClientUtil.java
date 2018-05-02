@@ -42,6 +42,7 @@ public class HttpClientUtil {
 	 * @author Sean
 	 * @since 2017-06-08
 	 * */
+	@SuppressWarnings("deprecation")
 	public static String httpPostMethod(String url, String paramStr) throws HttpException, IOException {
 		HttpClient client = new HttpClient();
 		// 设置代理服务器地址和端口(没有则不需要设置)

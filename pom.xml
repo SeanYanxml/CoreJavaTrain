@@ -31,6 +31,13 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- OK Http -->
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+			<version>3.6.0</version>
+		</dependency>
+
 	</dependencies>
 
 </project>
