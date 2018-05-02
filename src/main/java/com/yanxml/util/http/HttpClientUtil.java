@@ -52,7 +52,11 @@ public class HttpClientUtil {
 			method.setRequestEntity(new StringRequestEntity(paramStr));
 		}
 		client.executeMethod(method);
+		
+		// 设置编码
+		method.getParams().setContentCharset("UTF-8");
 		String response = method.getResponseBodyAsString();
+
 		// 释放连接
 		method.releaseConnection();
 		return response;
@@ -64,10 +68,21 @@ public class HttpClientUtil {
 	 * @since 2017-06-08
 	 * */
 	public static String httpGetMethod(String url) throws HttpException, IOException {
+		
+		System.out.println("你好!");
+		
+		
+		
 		HttpClient client = new HttpClient();
 		// 使用 GET 方法 ，如果服务器需要通过 HTTPS 连接，那只需要将下面 URL 中的 http 换成 https
 		HttpMethod method = new GetMethod(url);
+		
+		// add the utf-8 code
+		method.addRequestHeader("Content-type","application/json; charset=utf-8");
+		method.setRequestHeader("Accept", "application/json");
+		
 		client.executeMethod(method);
+		method.getParams().setContentCharset("UTF-8");
 		String response = method.getResponseBodyAsString();
 		// 释放连接
 		method.releaseConnection();
@@ -76,8 +91,8 @@ public class HttpClientUtil {
 	
 	public static void main(String[] args) throws HttpException, IOException {
 		// Test baidu get method
-		String getMethodResult = httpGetMethod("http://www.baidu.com");
-		System.out.println("Get Method: " + getMethodResult);
+//		String getMethodResult = httpGetMethod("http://www.baidu.com");
+//		System.out.println("Get Method: " + getMethodResult);
 		
 		// Test baidu post method
 		String postMethodResult = httpPostMethod("http://www.baidu.com", null);
