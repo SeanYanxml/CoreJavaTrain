@@ -101,3 +101,22 @@ public class HttpClientUtil {
 	}
 
 }
+
+//HttpClient 流式读取时中文乱码的解决方法
+//https://blog.csdn.net/jdsjlzx/article/details/8825845
+
+//使用httpclient post请求中文乱码解决办法
+//https://blog.csdn.net/xiaoyao8903/article/details/53244986
+
+//解决HttpServletResponse输出的中文乱码问题
+//https://blog.csdn.net/simon_1/article/details/9092747
+
+//Java应用程序中System.out.println输出中文乱码
+//https://www.cnblogs.com/shsgl/p/5127504.html
+
+//HttpClient学习整理 
+//http://www.cnblogs.com/ITtangtang/p/3968093.html
+
+//Android4种网络连接方式HttpClient、HttpURLConnection、OKHttp和Volley优缺点和性能对比
+//https://blog.csdn.net/zhangcanyan/article/details/51793951
+
